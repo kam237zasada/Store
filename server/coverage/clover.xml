@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1610207119396" clover="3.2.0">
+  <project timestamp="1610207119396" name="All files">
+    <metrics statements="52" coveredstatements="51" conditionals="52" coveredconditionals="49" methods="4" coveredmethods="4" elements="108" coveredelements="104" complexity="0" loc="52" ncloc="52" packages="1" files="4" classes="4"/>
+    <file name="brand.js" path="C:\Users\Kamil\Desktop\projekty_moje\Store\server\models\brand.js">
+      <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <line num="1" count="2" type="stmt"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="17" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="21" count="4" type="stmt"/>
+      <line num="24" count="2" type="stmt"/>
+      <line num="25" count="2" type="stmt"/>
+      <line num="26" count="2" type="stmt"/>
+    </file>
+    <file name="model.js" path="C:\Users\Kamil\Desktop\projekty_moje\Store\server\models\model.js">
+      <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <line num="1" count="2" type="stmt"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="17" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="20" count="4" type="stmt"/>
+      <line num="23" count="2" type="stmt"/>
+      <line num="24" count="2" type="stmt"/>
+      <line num="25" count="2" type="stmt"/>
+    </file>
+    <file name="product.js" path="C:\Users\Kamil\Desktop\projekty_moje\Store\server\models\product.js">
+      <metrics statements="10" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
+      <line num="38" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="40" count="0" type="stmt"/>
+      <line num="44" count="1" type="stmt"/>
+      <line num="45" count="1" type="stmt"/>
+    </file>
+    <file name="user.js" path="C:\Users\Kamil\Desktop\projekty_moje\Store\server\models\user.js">
+      <metrics statements="24" coveredstatements="24" conditionals="42" coveredconditionals="40" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="35" count="34" type="cond" truecount="4" falsecount="0"/>
+      <line num="36" count="33" type="cond" truecount="2" falsecount="0"/>
+      <line num="37" count="30" type="cond" truecount="2" falsecount="0"/>
+      <line num="38" count="29" type="cond" truecount="2" falsecount="0"/>
+      <line num="39" count="26" type="cond" truecount="2" falsecount="0"/>
+      <line num="42" count="24" type="cond" truecount="4" falsecount="0"/>
+      <line num="43" count="23" type="cond" truecount="2" falsecount="0"/>
+      <line num="44" count="14" type="cond" truecount="1" falsecount="1"/>
+      <line num="45" count="14" type="cond" truecount="1" falsecount="1"/>
+      <line num="50" count="15" type="cond" truecount="4" falsecount="0"/>
+      <line num="51" count="14" type="cond" truecount="2" falsecount="0"/>
+      <line num="52" count="12" type="cond" truecount="2" falsecount="0"/>
+      <line num="53" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="54" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="55" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="58" count="7" type="cond" truecount="4" falsecount="0"/>
+      <line num="59" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="62" count="6" type="stmt"/>
+      <line num="67" count="1" type="stmt"/>
+      <line num="68" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
