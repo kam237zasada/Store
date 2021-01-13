@@ -73,6 +73,7 @@ addSell = async (req, res) => {
         buyGrossPrice: grossPrice,
         sellNetPrice: req.body.sellNetPrice,
         sellGrossPrice: req.body.sellGrossPrice,
+        description: req.body.description,
         ID: ID
     });
 

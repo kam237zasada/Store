@@ -5,6 +5,7 @@ const { accessTokenVerify } = require('../controllers/auth');
 
 router.get('/', accessTokenVerify, productController.getProducts);
 router.get('/:id', accessTokenVerify, productController.getProduct);
+router.get('/serial/:serial', accessTokenVerify, productController.findBySerialNumber)
 router.post('/add', accessTokenVerify, productController.addProduct);
 
 module.exports = router;

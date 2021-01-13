@@ -66,12 +66,30 @@ addProduct = async (req, res) => {
         }
 
     }
+}
 
+findBySerialNumber = async (req, res) => {
+    const product = await Product.findOne({"serialNumbers": {"$elemMatch": {"serialNumber": req.params.serial}}});
+    if(!product) { return res.status(400).send('Nie istnieje taki numer seryjny!')};
+    let netPrice;
+    let grossPrice;
+    product.serialNumbers.map(serial => {
+        if(serial.serialNumber===req.params.serial) {
+            netPrice = serial.netPrice;
+            grossPrice = serial.grossPrice;
+        }
+    })
 
-
+    res.send({
+        brand: product.brand,
+        model: product.model,
+        netPrice: netPrice,
+        grossPrice: grossPrice
+    })
 }
 module.exports = {
     getProduct,
     getProducts,
-    addProduct
+    addProduct,
+    findBySerialNumber
 }

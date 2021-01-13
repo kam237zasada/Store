@@ -35,6 +35,9 @@ const singleSellSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
+    description: {
+        type: String
+    },
     ID: {
         type: Number
     }
