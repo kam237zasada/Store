@@ -9,6 +9,8 @@ const sellers = require('./routes/sellers');
 const buydocs = require('./routes/buyingDocuments');
 const brands = require('./routes/brands');
 const products = require('./routes/products');
+const sells = require('./routes/singleSells');
+
 const mongoLink = process.env.DBCONNECTION;
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -30,6 +32,7 @@ app.use('/seller', sellers);
 app.use('/buydocs', buydocs);
 app.use('/brand', brands);
 app.use('/product', products);
+app.use('/sell', sells)
 
 
 

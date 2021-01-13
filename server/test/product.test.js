@@ -8,7 +8,7 @@ describe('Id kategorii', () => {
         ]
         .map(givenData => {
         test(givenData.brandId, () => {
-            expect(() => validateProduct(givenData)).toThrowError(`Podaj poprawną nazwę marki!`)
+            expect(() => validateProduct(givenData)).toThrowError(`Podaj poprawną nazwę modelu`)
     })
         })
 })

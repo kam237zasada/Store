@@ -33,7 +33,7 @@ function validateProduct(product) {
     if(product.brandId) {
         if(product.brandId.length !== 24) { throw `Musisz podać poprawną markę`}
     } else { throw `Musisz podać poprawną markę` }
-    if(product.model==='' || product.model.includes('  ')) { throw 'Podaj poprawną nazwę modelu'};
+    if(!product.model || product.model==='' || product.model.includes('  ')) { throw 'Podaj poprawną nazwę modelu'};
     
 
     

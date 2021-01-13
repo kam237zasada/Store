@@ -1,43 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1610207119396" clover="3.2.0">
-  <project timestamp="1610207119396" name="All files">
-    <metrics statements="52" coveredstatements="51" conditionals="52" coveredconditionals="49" methods="4" coveredmethods="4" elements="108" coveredelements="104" complexity="0" loc="52" ncloc="52" packages="1" files="4" classes="4"/>
+<coverage generated="1610567554193" clover="3.2.0">
+  <project timestamp="1610567554193" name="All files">
+    <metrics statements="67" coveredstatements="60" conditionals="112" coveredconditionals="88" methods="6" coveredmethods="4" elements="185" coveredelements="152" complexity="0" loc="67" ncloc="67" packages="1" files="4" classes="4"/>
     <file name="brand.js" path="C:\Users\Kamil\Desktop\projekty_moje\Store\server\models\brand.js">
-      <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <metrics statements="16" coveredstatements="11" conditionals="16" coveredconditionals="6" methods="3" coveredmethods="1"/>
       <line num="1" count="2" type="stmt"/>
       <line num="4" count="2" type="stmt"/>
-      <line num="14" count="2" type="stmt"/>
-      <line num="17" count="7" type="cond" truecount="2" falsecount="0"/>
-      <line num="18" count="6" type="cond" truecount="2" falsecount="0"/>
-      <line num="21" count="4" type="stmt"/>
-      <line num="24" count="2" type="stmt"/>
-      <line num="25" count="2" type="stmt"/>
-      <line num="26" count="2" type="stmt"/>
-    </file>
-    <file name="model.js" path="C:\Users\Kamil\Desktop\projekty_moje\Store\server\models\model.js">
-      <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-      <line num="1" count="2" type="stmt"/>
-      <line num="4" count="2" type="stmt"/>
-      <line num="14" count="2" type="stmt"/>
-      <line num="17" count="7" type="cond" truecount="2" falsecount="0"/>
-      <line num="18" count="6" type="cond" truecount="2" falsecount="0"/>
-      <line num="20" count="4" type="stmt"/>
-      <line num="23" count="2" type="stmt"/>
-      <line num="24" count="2" type="stmt"/>
-      <line num="25" count="2" type="stmt"/>
+      <line num="18" count="2" type="stmt"/>
+      <line num="21" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="22" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="23" count="4" type="cond" truecount="2" falsecount="2"/>
+      <line num="24" count="0" type="stmt"/>
+      <line num="25" count="0" type="cond" truecount="0" falsecount="4"/>
+      <line num="30" count="4" type="stmt"/>
+      <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="37" count="0" type="stmt"/>
+      <line num="40" count="2" type="stmt"/>
+      <line num="41" count="2" type="stmt"/>
+      <line num="42" count="2" type="stmt"/>
+      <line num="43" count="2" type="stmt"/>
     </file>
     <file name="product.js" path="C:\Users\Kamil\Desktop\projekty_moje\Store\server\models\product.js">
-      <metrics statements="10" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <metrics statements="12" coveredstatements="10" conditionals="9" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="34" count="1" type="stmt"/>
-      <line num="38" count="2" type="cond" truecount="1" falsecount="1"/>
-      <line num="40" count="0" type="stmt"/>
-      <line num="44" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="33" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="34" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="35" count="0" type="stmt"/>
+      <line num="36" count="2" type="cond" truecount="2" falsecount="3"/>
+      <line num="41" count="0" type="stmt"/>
       <line num="45" count="1" type="stmt"/>
+      <line num="46" count="1" type="stmt"/>
+    </file>
+    <file name="singleSell.js" path="C:\Users\Kamil\Desktop\projekty_moje\Store\server\models\singleSell.js">
+      <metrics statements="15" coveredstatements="15" conditionals="45" coveredconditionals="38" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="39" count="1" type="stmt"/>
+      <line num="42" count="5" type="cond" truecount="4" falsecount="1"/>
+      <line num="43" count="5" type="cond" truecount="4" falsecount="1"/>
+      <line num="44" count="5" type="cond" truecount="4" falsecount="1"/>
+      <line num="45" count="5" type="cond" truecount="4" falsecount="1"/>
+      <line num="46" count="5" type="cond" truecount="6" falsecount="0"/>
+      <line num="47" count="4" type="cond" truecount="6" falsecount="0"/>
+      <line num="48" count="1" type="cond" truecount="5" falsecount="2"/>
+      <line num="49" count="1" type="cond" truecount="5" falsecount="1"/>
+      <line num="51" count="1" type="stmt"/>
+      <line num="54" count="1" type="stmt"/>
+      <line num="55" count="1" type="stmt"/>
     </file>
     <file name="user.js" path="C:\Users\Kamil\Desktop\projekty_moje\Store\server\models\user.js">
       <metrics statements="24" coveredstatements="24" conditionals="42" coveredconditionals="40" methods="1" coveredmethods="1"/>

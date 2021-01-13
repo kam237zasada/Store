@@ -20,7 +20,7 @@ const Brand = mongoose.model('Brand', brandSchema);
 function validateBrand(brand) {
     if(brand.name==='') { throw `Podaj poprawną nazwę marki!`}
     if(brand.name.includes('  ')) { throw `Podaj poprawną nazwę marki!`}
-    if(brand.models.length>0) {
+    if(brand.models && brand.models.length>0) {
         brand.models.map(model => {
             if(model==="" || model.includes('  ')) { throw `Podaj poprawną nazwę modelu`}
         })
