@@ -7,4 +7,9 @@ function setID(collection) {
     return currentNumber
 }
 
+function compareNumbers(a, b) {
+    return a-b
+}
+
 exports.setID = setID;
+exports.compareNumbers = compareNumbers

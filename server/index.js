@@ -3,9 +3,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const bodyParser = require('body-parser');
-const cors = require('cors')
-const users = require('./routes/users')
-const mongoLink = process.env.DBCONNECTION
+const cors = require('cors');
+const users = require('./routes/users');
+const sellers = require('./routes/sellers');
+const buydocs = require('./routes/buyingDocuments');
+const brands = require('./routes/brands');
+const products = require('./routes/products');
+const mongoLink = process.env.DBCONNECTION;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
@@ -22,5 +26,10 @@ mongoose.connect(mongoLink, { useFindAndModify: false, useNewUrlParser: true,use
 
 app.use(express.json());
 app.use('/user', users);
+app.use('/seller', sellers);
+app.use('/buydocs', buydocs);
+app.use('/brand', brands);
+app.use('/product', products);
+
 
 

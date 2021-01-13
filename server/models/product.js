@@ -1,7 +1,6 @@
 const Joi = require('joi');
 const mongoose = require('mongoose');
 const { brandSchema } = require('./brand')
-const { modelSchema } = require('./model')
 
 
 
@@ -11,7 +10,7 @@ const productSchema = new mongoose.Schema({
         required: true
     },
     model: {
-        type: modelSchema,
+        type: String,
         required: true
     },
     serialNumbers: {
@@ -24,10 +23,6 @@ const productSchema = new mongoose.Schema({
     },
     ID: {
         type: Number
-    },
-    dateAdded: {
-        type: Number,
-        default: Date.now()
     }
 })
 
@@ -38,9 +33,8 @@ function validateProduct(product) {
     if(product.brandId) {
         if(product.brandId.length !== 24) { throw `Musisz podać poprawną markę`}
     } else { throw `Musisz podać poprawną markę` }
-    if(product.modelId) {
-        if(product.modelId.length !== 24) { throw `Musisz podać poprawny model`}
-    } else { throw `Musisz podać popranwy model` }
+    if(product.model==='' || product.model.includes('  ')) { throw 'Podaj poprawną nazwę modelu'};
+    
 
     
 

@@ -34,14 +34,14 @@ addSeller = async (req, res) => {
     let sellers = await Seller.find();
     let ID = setID(sellers);
 
-    const newSeller = {
+    const newSeller = new Seller({
         name: req.body.name,
         address: req.body.address,
         postalCode: req.body.postalCode,
         city: req.body.city,
         NIP: req.body.NIP,
         ID: ID
-    }
+    })
 
     try {
         await newSeller.save();
@@ -49,7 +49,7 @@ addSeller = async (req, res) => {
             message: 'Nowy sprzedawca zdefiniowany'
         })
     } catch(err) {
-        res.status(500).send('Coś poszło nie tak!')
+        res.status(500).send(err)
     }
 };
 
