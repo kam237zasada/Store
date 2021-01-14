@@ -4,7 +4,7 @@ const router = express.Router();
 const { accessTokenVerify } = require('../controllers/auth');
 
 router.get('/', accessTokenVerify, userController.getUsers);
-router.get('/:id', accessTokenVerify, userController.getUser);
+router.get('/single', accessTokenVerify, userController.getUser);
 router.post('/add', accessTokenVerify, userController.addUser);
 router.post('/signin', userController.signInUser);
 router.put('/update', accessTokenVerify, userController.updateUser);

@@ -5,8 +5,9 @@ const jwt = require('jsonwebtoken');
 const { generateTokens } = require('./auth')
 
 getUser = async (req, res) => {
-    const user = await User.findById(req.params.id);
+    let encoded = jwt.decode(req.headers.token)
 
+    let user = await User.findById(encoded.sub);
     if(!user) {return res.status(404).send("Brak takiego użytkownika")};
 
     res.send(user);
