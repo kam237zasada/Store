@@ -64,7 +64,27 @@ export const getProducts = (token) => async dispatch => {
     dispatch({type: 'GET_PRODUCTS', payload: response.data})
 }
 
-export const addProduct = (token, brandId, model, amount, serialNumbers) => async dispatch => {
-    let response = await apis.post('product/add', {brandId, model, amount, serialNumbers}, {headers: {token: token}});
+export const addProduct = (token, brandId, model, amount, serialNumbers, netPrice, grossPrice) => async dispatch => {
+    let response = await apis.post('product/add', {brandId, model, amount, serialNumbers, netPrice, grossPrice}, {headers: {token: token}});
     dispatch({type: 'ADD_PRODUCT', payload: response.data})
+}
+
+export const getSells = (token) => async dispatch => {
+    let response = await apis.get('sell', {headers: {token: token}});
+    dispatch({type: 'GET_SELLS', payload: response.data})
+}
+
+export const findSerials = (token, query) => async dispatch => {
+    let response = await apis.get(`product/query/${query}`, {headers: {token: token}});
+    dispatch({type: 'FIND_SERIALS', payload: response.data})
+}
+
+export const findBySerial = (token, serial) => async dispatch => {
+    let response = await apis.get(`product/serial/${serial}`, {headers: {token: token}});
+    dispatch({type: 'FIND_BY_SERIAL', payload: response.data});
+}
+
+export const addSell = (token, brandId, model, date, sellNetPrice, sellGrossPrice, serialNumber, description) => async dispatch => {
+    let response = await apis.post(`sell/add`, {brandId, model, date, sellNetPrice, sellGrossPrice, serialNumber, description}, {headers: {token: token}});
+    dispatch({type: 'ADD_SELL', payload: response.data})
 }

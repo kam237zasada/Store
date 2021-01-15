@@ -138,6 +138,15 @@ class Form extends React.Component {
         let amount = Number(this.state.amount);
         amount = Number(Math.round(amount + 'e+2') + 'e-2')
         let totalPrice = grossPrice*amount;
+        // let serials = []
+        // this.state.serialNumbers.map(serial => {
+        //     serials.push({
+        //         serialNumber: serial,
+        //         netPrice: this.state.netPrice,
+        //         grossPrice: grossPrice
+        //     })
+        // })
+        
         let product = {brand: this.state.brandSelected, model: this.state.modelSelected, amount: this.state.amount, netPrice: this.state.netPrice, grossPrice: grossPrice, serialNumbers: this.state.serialNumbers, totalPrice: totalPrice}
         this.props.addToList(product)
     }

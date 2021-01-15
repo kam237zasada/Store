@@ -35,3 +35,11 @@ export function setCookie(cookieName, cookieValue, expireHours) {
       function lz(number) {
             return `${number}`.padStart(2, "0");
       }
+
+      export function changeNumber(price) {
+        let string = price.toString();
+        if (string.indexOf(".") == -1) { string = `${string}.00`; }
+        if (string.charAt(string.length-1) == ".") { string = `${string}00`; }
+        if (string.charAt(string.length-2) == ".") { string = `${string}0`; }
+        return string
+    };

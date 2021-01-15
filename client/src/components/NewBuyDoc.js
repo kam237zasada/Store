@@ -118,7 +118,7 @@ class NewBuyDoc extends React.Component {
         try {
             await this.props.addBuyingDocument(jwt, this.state.date, this.state.docNumber, this.state.sellerSelected._id, this.state.products, this.state.totalPrice)
             this.state.products.map(async product => {
-                await this.props.addProduct(jwt, product.brand._id, product.model, product.amount, product.serialNumbers)
+                await this.props.addProduct(jwt, product.brand._id, product.model, product.amount, product.serialNumbers, product.netPrice, product.grossPrice)
             })
         } catch(err) {
             return this.setState({error: err.response.data})

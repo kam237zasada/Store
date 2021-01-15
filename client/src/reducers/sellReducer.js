@@ -1,10 +1,10 @@
 export default (
-    state = {},
+    state = [],
     action) => {
         switch (action.type) {
-            case 'ADD_PRODUCT':
+            case 'GET_SELL':
                 return action.payload;
-            case 'FIND_BY_SERIAL':
+            case 'ADD_SELL':
                 return action.payload;
             default: 
                 return state;

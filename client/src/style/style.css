@@ -2,6 +2,7 @@
     padding: 0px;
     margin: 0px;
     font-size: 20px;
+    font-family:'Lucida Sans', sans-serif
 }
 
 a {
@@ -116,4 +117,18 @@ tr, td, th {
     box-shadow: 1px 1px gray;
     border: 1px solid gray;
     z-index: 2;
+}
+
+.ul {
+    list-style-type: none;
+    border: 2px solid grey;
+    margin-left: 5px;
+}
+
+.li:hover {
+    background-color:aqua;
+}
+
+.readonly {
+    background-color:#DDDDDD
 }

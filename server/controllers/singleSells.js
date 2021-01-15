@@ -20,7 +20,7 @@ addSell = async (req, res) => {
     try {
         validateSingleSell(req.body);
     } catch(err) {
-        console.log("błąd")
+        console.log(err)
         return res.status(400).send(err)
     }
 
@@ -43,22 +43,18 @@ addSell = async (req, res) => {
     let grossPrice;
     let indexToDelete;
     product.serialNumbers.map((serial, index) => {
-        if(serial.serialNumber === req.body.serialNumber) {
+        if(serial.serialNumber == req.body.serialNumber) {
             netPrice = serial.netPrice;
             grossPrice = serial.grossPrice
             indexToDelete = index
+            console.log("wykonuje sie")
         }   
     })
 
     product.serialNumbers.splice(indexToDelete, 1);
     product.amount -=1;
-
-    try{
+    try {
         await product.save()
-    } catch(err) {
-        return res.status(500).send('Coś poszło nie tak')
-    }
-
 
 
     const sells = await SingleSell.find();
@@ -77,13 +73,12 @@ addSell = async (req, res) => {
         ID: ID
     });
 
-    try {
         await newSell.save();
         res.send('Nowa sprzedaż dodana')
-    } catch(err) {
-        console.log(err)
-        return res.status(500).send('Coś poszło nie tak')
-    }
+   
+} catch(err) {
+    return res.status(500).send("Cos poszło nie tak")
+}
 
     res.send(product)
 

@@ -68,6 +68,23 @@ addProduct = async (req, res) => {
     }
 }
 
+findSerials = async (req, res) => {
+    let query = req.params.query;
+    const reg = new RegExp(query, "i");
+    const products = await Product.find({"serialNumbers": { "$elemMatch": {"serialNumber": {$regex: reg}}}})
+
+    if(products.length===0) { return res.status(404).send('Nie ma numerów dla podanych danych')} 
+
+    let serials = []
+    products.map(product => {
+        product.serialNumbers.map(serial => {
+            if(serial.serialNumber.match(reg)) {serials.push(serial.serialNumber)}
+        })
+    })
+
+    res.send(serials)
+}
+
 findBySerialNumber = async (req, res) => {
     const product = await Product.findOne({"serialNumbers": {"$elemMatch": {"serialNumber": req.params.serial}}});
     if(!product) { return res.status(400).send('Nie istnieje taki numer seryjny!')};
@@ -91,5 +108,6 @@ module.exports = {
     getProduct,
     getProducts,
     addProduct,
+    findSerials,
     findBySerialNumber
 }

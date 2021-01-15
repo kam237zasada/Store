@@ -7,6 +7,9 @@ import sellerReducer from './sellerReducer';
 import fetchBrands from './fetchBrands';
 import brandReducer from './brandReducer';
 import fetchProducts from './fetchProducts';
+import fetchSells from './fetchSells';
+import sellReducer from './sellReducer';
+import productReducer from './productReducer';
 
 export default combineReducers({
     user: userReducer,
@@ -16,5 +19,9 @@ export default combineReducers({
     seller: sellerReducer,
     brands: fetchBrands,
     brand: brandReducer,
-    products: fetchProducts
+    products: fetchProducts,
+    sells: fetchSells, 
+    sell: sellReducer,
+    product: productReducer
+
 });

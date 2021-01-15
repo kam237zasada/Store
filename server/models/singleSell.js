@@ -46,14 +46,14 @@ const singleSellSchema = new mongoose.Schema({
 const SingleSell = mongoose.model('SingleSell', singleSellSchema);
 
 function validateSingleSell(singleSell) {
-    if(!singleSell.date || singleSell.date==='' || singleSell.date.includes(' ')) { throw `Podaj poprawną datę!`};
+    let date = singleSell.date.toString();
+    let grossPrice = singleSell.sellGrossPrice.toString();
+    if(!singleSell.date || singleSell.date==='' || date.includes(' ')) { throw `Podaj poprawną datę!`};
     if(!singleSell.brandId || singleSell.brandId.length!==24 || singleSell.brandId.includes(' ')) { throw `Podaj poprawną markę!`};
     if(!singleSell.model || singleSell.model==='' || singleSell.model.includes('  ')) { throw `Podaj poprawny model!`};
     if(!singleSell.serialNumber || singleSell.serialNumber==='' || singleSell.serialNumber.includes('  ')) { throw `Podaj poprawny numer seryjny!`};
-    if(!singleSell.buyNetPrice || singleSell.buyNetPrice==='' || !singleSell.buyNetPrice.match(/\b\d{1,}\.\d{2}\b/) || /\s/.test(singleSell.buyNetPrice)) { throw `Niepoprawny format kwoty!`}
-    if(!singleSell.buyGrossPrice || singleSell.buyGrossPrice==='' || !singleSell.buyGrossPrice.match(/\b\d{1,}\.\d{2}\b/) || /\s/.test(singleSell.buyGrossPrice)) { throw `Niepoprawny format kwoty!`}
     if(!singleSell.sellNetPrice || singleSell.sellNetPrice==='' || !singleSell.sellNetPrice.match(/\b\d{1,}\.\d{2}\b/ || /\s/.test(singleSell.sellNetPrice))) { throw `Niepoprawny format kwoty!`}
-    if(!singleSell.sellGrossPrice || singleSell.sellGrossPrice==='' || !singleSell.sellGrossPrice.match(/\b\d{1,}\.\d{2}\b/) || /\s/.test(singleSell.sellGrossPrice)) { throw `Niepoprawny format kwoty!`}
+    if(!singleSell.sellGrossPrice || singleSell.sellGrossPrice==='' || !grossPrice.match(/\b\d{1,}\.\d{2}\b/) || /\s/.test(grossPrice)) { throw `Niepoprawny format kwoty!`}
 
     return singleSell
 };
