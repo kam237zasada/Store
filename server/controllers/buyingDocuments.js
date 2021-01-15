@@ -42,10 +42,10 @@ addBuyingDocument = async (req, res) => {
     const seller = await Seller.findById(req.body.sellerId);
     if(!seller) { return res.status(404).send('Nie ma takiego sprzedawcy!')}
 
-    let totalPrice = req.body.products.reduce((prev, cur) => {
-        console.log(prev.totalPrice)
-        return prev.totalPrice + cur.totalPrice
-    });
+    // let totalPrice = req.body.products.reduce((prev, cur) => {
+    //     console.log(prev.totalPrice)
+    //     return prev.totalPrice + cur.totalPrice
+    // });
 
     let documents = await buyingDocument.find();
     let ID = setID(documents);
@@ -55,7 +55,7 @@ addBuyingDocument = async (req, res) => {
         docNumber: req.body.docNumber,
         date: req.body.date,
         products: req.body.products,
-        totalPrice: totalPrice,
+        totalPrice: req.body.totalPrice,
         ID: ID
     })
 

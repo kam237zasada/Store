@@ -1,6 +1,7 @@
 * {
     padding: 0px;
     margin: 0px;
+    font-size: 20px;
 }
 
 a {
@@ -9,11 +10,11 @@ a {
 
 .input {
     border-radius: 5px 5px;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 .button {
-    font-size: 18px;
+    font-size: 0.9rem;
     border-radius: 10px 10px;
     padding: 10px;
 }
@@ -25,6 +26,14 @@ a {
 
 .flex {
     display: flex;
+}
+
+.wide {
+    padding: 20%;
+}
+
+.narrow {
+    padding: 5%;
 }
 
 .column {
@@ -76,5 +85,35 @@ tr, td, th {
     text-align: center;
 }
 .right {
-    text-align: right!important;
+    text-align: right;
+}
+
+#mask {
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position:fixed;
+}
+
+#new-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 10vh;
+    left: 30vw;
+    width: 40vw;
+    height: 60vh;
+    min-height: 500px;
+    background-color:white;
+    border-radius: 5px;
+    box-shadow: 1px 1px gray;
+    border: 1px solid gray;
+    z-index: 2;
 }

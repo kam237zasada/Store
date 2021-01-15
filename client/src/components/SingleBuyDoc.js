@@ -1,7 +1,7 @@
 import React from 'react';
 import { getBuyingDocument } from '../actions/index';
 import { connect } from 'react-redux';
-import { getCookie } from '../js/index';
+import { getCookie, getDate } from '../js/index';
 
 
 
@@ -34,10 +34,11 @@ class SingleBuyDoc extends React.Component {
     renderTable = () => {
         
         return this.state.products.map((product, index) => {
+
             return (
                 <tr>
                     <td>{index+1}</td>
-                    <td>{product.brandId}</td>
+                    <td>{product.brand.name}</td>
                     <td>{product.model}</td>
                     <td>{product.amount}</td>
                     <td>{product.netPrice}</td>
@@ -49,10 +50,12 @@ class SingleBuyDoc extends React.Component {
     }
 
     render() {
+        let date = new Date(this.state.buyDoc.date);
+        let stringDate = getDate(date);
         const renderContent = (
             <div className="container">
                 <header className="flex center">
-                    <div>Data sprzedaży: {this.state.buyDoc.date}</div>
+                    <div>Data sprzedaży: {stringDate}</div>
                     <div>Numer dokumentu: {this.state.buyDoc.docNumber}</div>
 
                     <div>Sprzedawca:

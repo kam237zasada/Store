@@ -27,3 +27,11 @@ export function setCookie(cookieName, cookieValue, expireHours) {
       }
       return "";
     }
+
+    export function getDate(date) {
+        return `${date.getFullYear()}-${lz((date.getMonth()+1))}-${lz(date.getDate())}`
+      }
+      
+      function lz(number) {
+            return `${number}`.padStart(2, "0");
+      }

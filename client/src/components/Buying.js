@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getBuyingDocuments } from '../actions/index';
-import { getCookie } from '../js/index';
+import { getCookie, getDate } from '../js/index';
 
 class Buying extends React.Component{
     constructor(props) {
@@ -23,11 +23,15 @@ class Buying extends React.Component{
     }
 
     renderTable = () => {
+
         return this.state.buyDocs.map(buyDoc => {
+            let date = new Date(buyDoc.date);
+            let stringDate = getDate(date)
+
             return (
                 <tr>
                     <td>{buyDoc.ID}</td>
-                    <td>{buyDoc.date}</td>
+                    <td>{stringDate}</td>
                     <td>{buyDoc.docNumber}</td>
                     <td>{buyDoc.seller.name}</td>
                     <td>{buyDoc.totalPrice}</td>
@@ -42,7 +46,7 @@ class Buying extends React.Component{
         const renderSite = (
             <div className="container">
             <header className="flex">
-                <button className="button green">DODAJ DOKUMENT ZAKUPOWY</button>
+                <a href='/zakupy/dodaj'><button className="button green">DODAJ DOKUMENT ZAKUPOWY</button></a>
             </header>
             <main>
                 <table>

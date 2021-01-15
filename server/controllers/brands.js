@@ -8,7 +8,7 @@ getBrand = async (req, res) => {
 };
 
 getBrands = async (req, res) => {
-    const brands = await Brand.find();
+    const brands = await Brand.find().sort('name');
     if(brands.length===0) { return res.status(404).send('Brak zdefiiowanych marek')};
     res.send(brands)
 };
@@ -32,7 +32,7 @@ addBrand = async (req, res) => {
 
     const newBrand = new Brand({
         name: req.body.name,
-        models: req.body.models,
+        models: req.body.models || [],
         ID: ID
     })
 

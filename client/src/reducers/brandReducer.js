@@ -2,9 +2,9 @@ export default (
     state = {},
     action) => {
         switch (action.type) {
-            case 'GET_BUYDOC':
+            case 'ADD_BRAND':
                 return action.payload;
-            case 'ADD_BUYDOC':
+            case 'ADD_MODEL':
                 return action.payload;
             default: 
                 return state;

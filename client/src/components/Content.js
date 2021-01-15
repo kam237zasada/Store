@@ -5,6 +5,7 @@ import Sell from './Sell';
 import Settings from './Settings';
 import Store from './Store';
 import SingleBuyDoc from './SingleBuyDoc'
+import NewBuyDoc from './NewBuyDoc'
 
 class Content extends React.Component {
 
@@ -18,6 +19,7 @@ class Content extends React.Component {
                 <Route path='/sprzedaz' exact component={Sell}/>
                 <Route path='/konfiguracja' exact component={Settings}/>
                 <Route path='/magazyn' exact component={Store}/>
+                <Route path='/zakupy/dodaj' exact component={NewBuyDoc}/>
             </Switch>
         </Router>
         )
